@@ -1,0 +1,25 @@
+
+.categories_container, .links_container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links_container {
+  margin-left: 15px;
+}
+
+.category_container {
+  text-transform: uppercase;
+  color: #fff;
+  // padding: 10px;
+}
+
+.category_link {
+  color: #80CBF3;
+  text-decoration: none;
+  text-transform: capitalize;
+  &:hover {
+    text-decoration: underline;
+  }
+}
