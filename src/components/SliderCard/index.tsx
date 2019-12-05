@@ -3,6 +3,7 @@ import css from './index.module.scss';
 import { ProductInfo } from '../../consts';
 import { Tag } from '../Tag';
 import { HeroPrice } from '../HeroPrice';
+import { RoundedButton } from '../RoundedButton';
 
 // TODO: better semantics
 export const SliderCard = (product: ProductInfo) => (
@@ -17,7 +18,7 @@ export const SliderCard = (product: ProductInfo) => (
       </div>
       <div className={css.bottom_section}>
         <p>{product.description}</p>
-        <a>Read more</a>
+        <RoundedButton title="Read more" />
       </div>
     </div>
     <div className={css.hero_container}>

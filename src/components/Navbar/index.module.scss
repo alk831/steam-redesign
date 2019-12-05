@@ -13,6 +13,12 @@
   display: flex;
   margin: 0;
   padding: 0;
+  a:first-child {
+    // margin-left: 0;
+  }
+  a:after:last-child {
+    display: none;
+  }
 }
 
 .link {

@@ -8,7 +8,9 @@ export const SideMenu = () => {
       <ul className={css.categories_container}>
         {CATEGORY_LINKS.map((([title, links]) => (
           <li key={title} className={css.category_container}>
-            {title}
+            <span className={css.category_name}>
+              {title}
+            </span>
             <ul className={css.links_container}>
               {(links as any).map((link: any) => (
                 <li key={link}>

@@ -8,8 +8,8 @@ export function App() {
   return (
     <div>
       <Header />
-      <SideMenu />
       <Navbar />
+      <SideMenu />
       <Slider products={[
         {
           title: 'The Witcher 3: Wild Hunt',
