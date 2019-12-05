@@ -2,17 +2,7 @@ import React from 'react';
 import css from './index.module.scss';
 import { ProductInfo } from '../../consts';
 import { Tag } from '../Tag';
-
-interface HeroPriceProps {
-  decimal: number
-  float: number
-}
-
-const HeroPrice = () => (
-  <div>
-    {}
-  </div>
-);
+import { HeroPrice } from '../HeroPrice';
 
 // TODO: better semantics
 export const SliderCard = (product: ProductInfo) => (
@@ -37,7 +27,7 @@ export const SliderCard = (product: ProductInfo) => (
         className={css.hero_image}
       />
       <div className={css.hero_price}>
-        
+        <HeroPrice value={product.price[0] as any} />
       </div>
     </div>
   </div>

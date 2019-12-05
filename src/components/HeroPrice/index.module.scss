@@ -1,0 +1,27 @@
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.price_decimal, .price_float {
+  font-weight: 200;
+}
+
+.price_decimal {
+  font-size: 60px;
+}
+
+.float_container {
+  margin-left: 3px;
+}
+
+.price_float {
+  font-size: 30px;
+}
+
+.currency {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
