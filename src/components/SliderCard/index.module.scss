@@ -1,0 +1,36 @@
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: 100;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-start;
+}
+
+.info_container {
+  background: #252C5E;
+  width: 200px;
+}
+
+.top_section {
+  background: linear-gradient(160deg, rgba(40,88,173,1) 0%, rgba(37,44,94,1) 100%);
+  border-bottom: 1px solid #2D60BF;
+  padding: 15px;
+}
+
+.bottom_section {
+  padding: 15px;
+}
+
+.hero_image {
+  width: 600px;
+}

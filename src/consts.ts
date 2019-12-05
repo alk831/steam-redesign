@@ -65,3 +65,19 @@ export const HEADER_LINKS = [
     title: 'Support',
   },
 ] as const;
+
+export const PRODUCTS = [
+
+] as const;
+
+export interface ProductInfo {
+  title: string
+  tags: string[]
+  rate: number
+  votes?: number
+  description: string
+  // price: number
+  price: [(number | string), (number | string)]
+  imageUrl: string
+  releaseDate: string
+}
