@@ -6,7 +6,7 @@ interface InputSearcherProps extends
 
 export const InputSearcher = (props: InputSearcherProps) => {
   return (
-    <div>
+    <div className={css.container}>
       <input 
         type="text"
         className={css.input}

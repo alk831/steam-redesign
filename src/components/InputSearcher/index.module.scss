@@ -1,10 +1,14 @@
 
+.container {}
+
 .input {
   background: none;
   padding: 0;
   font-family: Open Sans;
   color: #fff;
   border: 1px solid #4A5EC8;
-  border-radius: 10px;
-  padding: 10px 15px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  outline: none;
+  position: relative;
 }
