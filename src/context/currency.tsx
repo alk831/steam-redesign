@@ -2,7 +2,12 @@ import React, { ReactNode, useState, useMemo } from 'react';
 
 export const CurrencyContext = React.createContext<ICurrencyContext>({
   currency: 'USD',
-  setCurrency: () => {}
+  setCurrency: () => {},
+  intl: {
+    format: () => '',
+    formatToParts: () => [],
+    resolvedOptions: () => ({}) as any,
+  }
 });
 
 interface CurrencyProviderProps {
@@ -11,11 +16,19 @@ interface CurrencyProviderProps {
 
 export const CurrencyProvider = (props: CurrencyProviderProps) => {
   const [currency, setCurrency] = useState<Currency>('USD');
+
   const memoizedContext = useMemo<ICurrencyContext>(
-    () => ({ currency, setCurrency }),
+    () => {
+      const intl = new Intl.NumberFormat(
+        'en-EN',
+        { currency }
+      );
+
+      return { currency, setCurrency, intl };
+    },
     [currency, setCurrency]
   );
-  
+
   return (
     <CurrencyContext.Provider value={memoizedContext}>
       {props.children}
@@ -29,4 +42,5 @@ type Currency = 'USD' | 'PLN' | 'EUR' | 'GBP';
 interface ICurrencyContext {
   currency: Currency
   setCurrency: (currency: Currency) => void
+  intl: Intl.NumberFormat
 }

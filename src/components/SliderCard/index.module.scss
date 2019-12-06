@@ -1,4 +1,7 @@
 
+$padding: 25px;
+$height: 160px;
+
 .container {
   display: flex;
   align-items: center;
@@ -6,7 +9,7 @@
 
 .title {
   font-weight: 100;
-  font-size: 25px;
+  font-size: 28px;
   margin: 0 0 20px 0;
 }
 
@@ -17,17 +20,25 @@
 
 .info_container {
   background: #252C5E;
-  width: 200px;
+  width: 250px;
+}
+
+.description {
+  margin: 15px 0;
 }
 
 .top_section {
   background: linear-gradient(160deg, rgba(40,88,173,1) 0%, rgba(37,44,94,1) 100%);
   border-bottom: 1px solid #2D60BF;
-  padding: 15px;
+  padding: $padding;
 }
 
 .bottom_section {
-  padding: 15px;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero_container {
@@ -46,7 +57,7 @@
 }
 
 .hero_image {
-  width: 600px;
+  width: 650px;
 }
 
 .hero_price {
