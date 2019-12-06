@@ -1,0 +1,12 @@
+
+.container {
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #2A4E9A, #294285);
+  padding: 6px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  &.active {
+    background: linear-gradient(to bottom, #FEFEFE, #DDDDDD);
+  }
+}

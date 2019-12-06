@@ -2,6 +2,7 @@ import React from 'react';
 import css from './index.module.scss';
 import { ProductInfo } from '../../consts';
 import { SliderCard } from '../SliderCard';
+import { Carousel } from '../Carousel';
 
 interface SliderProps {
   products: ProductInfo[]
@@ -10,13 +11,10 @@ interface SliderProps {
 export const Slider = (props: SliderProps) => {
   return (
     <div>
-      <ul>
-        {props.products.map(product => (
-          <li key={product.title}>
-            <SliderCard {...product} />
-          </li>
-        ))}
-      </ul>
+      <Carousel
+        elements={props.products}
+        renderElement={product => <SliderCard {...product} />}
+      />
     </div>
   );
 }

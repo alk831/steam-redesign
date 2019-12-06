@@ -23,6 +23,16 @@ export function App() {
               releaseDate: 'May 2015',
               tags: ['RPG'],
               votes: 50293
+            },
+            {
+              title: 'The Witcher 1: Wild Stunt',
+              description: 'Become a professional monster slayer.',
+              imageUrl: 'https://img1.goodfon.com/wallpaper/nbig/7/b3/the-witcher-3-wild-hunt-507.jpg',
+              price: [49, 99],
+              rate: 4.5,
+              releaseDate: 'May 2015',
+              tags: ['RPG'],
+              votes: 50293
             }
           ]}
         />
