@@ -4,8 +4,10 @@
   justify-content: space-between;
   background: linear-gradient(to right, #2C54A9, #232754);
   border-radius: 10px;
-  padding: 10px;
+  padding: 7px;
   align-items: center;
+  grid-column: 2 / 3;
+  align-self: center;
 }
 
 .links_container {
@@ -13,9 +15,6 @@
   display: flex;
   margin: 0;
   padding: 0;
-  a:first-child {
-    // margin-left: 0;
-  }
   a:after:last-child {
     display: none;
   }

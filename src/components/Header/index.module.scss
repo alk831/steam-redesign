@@ -1,10 +1,14 @@
 
 .container {
+  background: linear-gradient(109deg, rgba(21,30,45,1) 0%, rgba(33,54,94,1) 100%);
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // #142139
-  background: linear-gradient(109deg, rgba(21,30,45,1) 0%, rgba(33,54,94,1) 100%);
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .links_container {

@@ -2,9 +2,9 @@ import React from 'react';
 import { HEADER_LINKS } from '../../consts';
 import css from './index.module.scss';
 
-export const Header = () => {
-  return (
-    <header className={css.container}>
+export const Header = () => (
+  <header className={css.container}>
+    <div className={css.wrapper}>
       <nav>
         <ul className={css.links_container}>
           {HEADER_LINKS.map(link => (
@@ -24,6 +24,6 @@ export const Header = () => {
           Install Steam
         </a>
       </div>
-    </header>
-  );
-}
+    </div>
+  </header>
+);
