@@ -5,6 +5,11 @@ import { StepButton } from '../StepButton';
 interface CarouselProps<T> {
   elements: T[]
   renderElement: (element: T) => ReactNode
+  /**
+   * Provide a unique key of element's property name (id) to improve reconciler's work.
+   */
+  keyExtractor?: keyof T
+  // keyExtractor?: (element: T) => string | number  Version 2 - inline function
 }
 
 export function Carousel<T>(props: CarouselProps<T>) {
