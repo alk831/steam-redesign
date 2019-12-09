@@ -16,7 +16,7 @@ export const Slider = (props: SliderProps) => {
       <Carousel
         elements={props.products}
         renderElement={product => <SliderCard {...product} />}
-        keyExtractor="title"
+        keyProvider="title"
       />
     </article>
   );

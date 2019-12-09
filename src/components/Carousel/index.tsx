@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import css from './index.module.scss';
 import { StepButton } from '../StepButton';
 
@@ -6,10 +6,9 @@ interface CarouselProps<T> {
   elements: T[]
   renderElement: (element: T) => ReactNode
   /**
-   * Provide a unique key of element's property name (id) to improve reconciler's work.
+   * Name of the element's property that will be used as a key in a loop render.
    */
-  keyExtractor?: keyof T
-  // keyExtractor?: (element: T) => string | number  Version 2 - inline function
+  keyProvider?: keyof T
 }
 
 export function Carousel<T>(props: CarouselProps<T>) {
