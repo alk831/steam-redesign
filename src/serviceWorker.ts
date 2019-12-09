@@ -54,7 +54,7 @@ export function register(config) {
   }
 }
 
-function registerValidSW(swUrl, config) {
+function registerValidSW(swUrl: string, config: unknown) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
@@ -98,7 +98,7 @@ function registerValidSW(swUrl, config) {
     });
 }
 
-function checkValidServiceWorker(swUrl, config) {
+function checkValidServiceWorker(swUrl: string, config: unknown) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
     .then(response => {
@@ -126,10 +126,9 @@ function checkValidServiceWorker(swUrl, config) {
     });
 }
 
-export function unregister() {
+export async function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
+    const registration = await navigator.serviceWorker.ready;
+    await registration.unregister();
   }
 }
