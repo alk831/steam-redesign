@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import css from './index.module.scss';
-import { CurrencyContext } from '../../context/currency';
+import { useCurrency } from '../../hooks/currency';
 
 interface HeroPriceProps {
   value: number
@@ -8,7 +8,7 @@ interface HeroPriceProps {
 
 export const HeroPrice = (props: HeroPriceProps) => {
   const [decimal, float = '00'] = String(props.value).split('.');
-  const { currency } = useContext(CurrencyContext);
+  const { currency } = useCurrency();
 
   return (
     <div className={css.container}>

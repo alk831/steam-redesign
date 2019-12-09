@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import css from './index.module.scss';
 import { ProductInfo } from '../../consts';
 import { Tag } from '../Tag';
 import { HeroPrice } from '../HeroPrice';
 import { RoundedButton } from '../RoundedButton';
-import { CurrencyContext } from '../../context/currency';
+import { useCurrency } from '../../hooks/currency';
 
 // TODO: better semantics
 export const SliderCard = (product: ProductInfo) => {
-  const { intl } = useContext(CurrencyContext);
+  const { intl } = useCurrency();
 
   return (
     <div className={css.container}>

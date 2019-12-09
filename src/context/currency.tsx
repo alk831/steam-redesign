@@ -1,14 +1,6 @@
 import React, { ReactNode, useState, useMemo } from 'react';
 
-export const CurrencyContext = React.createContext<ICurrencyContext>({
-  currency: 'USD',
-  setCurrency: () => {},
-  intl: {
-    format: () => '',
-    formatToParts: () => [],
-    resolvedOptions: () => ({}) as any,
-  }
-});
+export const CurrencyContext = React.createContext<ICurrencyContext | null>(null);
 
 interface CurrencyProviderProps {
   children: ReactNode
@@ -39,7 +31,7 @@ export const CurrencyProvider = (props: CurrencyProviderProps) => {
 
 type Currency = 'USD' | 'PLN' | 'EUR' | 'GBP';
 
-interface ICurrencyContext {
+export interface ICurrencyContext {
   currency: Currency
   setCurrency: (currency: Currency) => void
   intl: Intl.NumberFormat
