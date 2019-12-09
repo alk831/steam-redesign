@@ -33,7 +33,7 @@ export const SliderCard = (product: ProductInfo) => {
           className={css.hero_image}
         />
         <div className={css.hero_price}>
-          <HeroPrice value={product.price[0] as any} />
+          <HeroPrice value={product.price} />
         </div>
       </div>
     </div>

@@ -66,18 +66,13 @@ export const HEADER_LINKS = [
   },
 ] as const;
 
-export const PRODUCTS = [
-
-] as const;
-
 export interface ProductInfo {
   title: string
   tags: string[]
   rate: number
   votes?: number
   description: string
-  // price: number
-  price: [(number | string), (number | string)]
+  price: number
   imageUrl: string
   releaseDate: string
 }
